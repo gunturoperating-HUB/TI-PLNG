@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning - Operating Department</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Playfair Display', serif;
+    background: url('bbg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    text-align: center;
+    color: #002366;
+  }
+
+  /* Logo and Passport */
+  .logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .passport-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+  }
+
+  .passport {
+    width: 150px;
+    height: 170px;
+    border: 2px solid black;
+    object-fit: cover;
+  }
+
+  .caption {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #002366;
+    margin-top: 8px;
+  }
+
+  /* Headings */
+  .heading1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px white;
+    margin-top: 10px;
+  }
+
+  .heading2 {
+   font-family: 'Bookman Old Style', serif;
+      font-size: 65px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFD700;
+      -webkit-text-stroke: 2px black;
+      text-shadow: 5px 5px 5px blue;
+
+
+
+  }
+
+  .heading3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: green;
+    text-shadow: 3px 3px 5px yellow;
+  }
+
+  /* Button Grid */
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+    margin: 70px auto;
+    max-width: 80%;
+  }
+
+  button {
+    width: 250px;
+    height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    background-size: 200% auto;
+  }
+
+  button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Button Colors */
+  .btn1 { background: linear-gradient(to right, #1565c0, #1e88e5); }
+  .btn2 { background: linear-gradient(to right, #00897b, #26a69a); }
+  .btn3 { background: linear-gradient(to right, #6a1b9a, #8e24aa); }
+  .btn4 { background: linear-gradient(to right, #ef6c00, #f57c00); }
+  .btn5 { background: linear-gradient(to right, #f9a825, #f57f17); }
+  .btn6 { background: linear-gradient(to right, #84fab0, #8fd3f4); }
+  .btn7 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+  .btn8 { background: linear-gradient(to right, #ff9966, #ff5e62); }
+  .btn9 { background: linear-gradient(to right, #667eea, #764ba2); }
+
+  /* Scrolling Text */
+  .scroll-text {
+    margin-top: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 3px 3px 6px #002366;
+    border-top: 2px solid rgba(255,255,255,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding: 15px 0;
+    background: rgba(0, 35, 102, 0.2);
+  }
+
+  /* Watermark */
+  .watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    opacity: 0.1;
+    font-size: 120px;
+    font-weight: bold;
+    color: #0d47a1;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Photo Watermark */
+  .photo-watermark {
+    position: fixed;
+    bottom: 20px;
+    LEFT: 20px;
+    opacity: 0.25;
+    width: 120px;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 35, 102, 0.6);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+
+<body>
+  <img src="L2.jpeg" alt="Logo" class="logo">
+
+  <div class="passport-container">
+    <img src="R1.jpeg" alt="Passport Photo" class="passport">
+    <div class="caption">J.SRINATH, IRTS</div>
+    <div class="caption">Sr.DOM/GNT</div>
+  </div>
+
+  <div class="heading1">OPERATING DEPARTMENT</div>
+  <div class="heading2">Planning Cell</div>
+  <div class="heading3">GUNTUR DIVISION</div>
+
+  <div class="button-container">
+    <button class="btn1" onclick="openFolder('https://drive.google.com/drive/folders/...')">📅 Daily Planning Sheets</button>
+    <button class="btn2" onclick="openFolder('https://drive.google.com/drive/folders/...')">📈 Monthly Analysis</button>
+    <button class="btn3" onclick="openFolder('https://docs.google.com/spreadsheets/...')">🚂 </button>
+    <button class="btn4" onclick="openFolder('https://drive.google.com/drive/folders/...')">📊 </button>
+    <button class="btn5" onclick="openFolder('https://drive.google.com/drive/folders/...')">🗂️ </button>
+    <button class="btn6" onclick="openFolder('https://drive.google.com/drive/folders/...')">📋 </button>
+    <button class="btn7" onclick="openFolder('https://drive.google.com/drive/folders/...')">📑 </button>
+    <button class="btn8" onclick="openFolder('https://drive.google.com/drive/folders/...')">🏗️ </button>
+    <button class="btn9" onclick="openFolder('https://drive.google.com/drive/folders/...')">🚉 </button>
+  </div>
+
+  <div class="scroll-text">
+    <marquee behavior="scroll" direction="LEFT" scrollamount="12">
+      📢 Welcome to the <span>Planning Section</span> of the <span>Operating Department</span>, Guntur Division 🚂 | South Central Railway
+    </marquee>
+  </div>
+
+  <div class="watermark">PLAN</div>
+  
+
+  <footer>
+    <p>Designed for <strong>Planning & Analysis</strong> | Powered by 
+      <a href="file:///C:/Users/HP/Desktop/Gunturoperating/MAIN_SHEET/MAINindex.html">Operating Department, GNT Division</a>
+    </p>
+  </footer>
+
+  <script>
+    function openFolder(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
