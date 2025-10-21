@@ -21,60 +21,55 @@
   /* Logo and Passport */
   .logo {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 150px;
-    height: 150px;
+    top: 2%;
+    left: 2%;
+    width: clamp(80px, 12vw, 150px);
+    height: auto;
     object-fit: cover;
   }
 
   .passport-container {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 2%;
+    right: 2%;
     text-align: center;
   }
 
   .passport {
-    width: 150px;
-    height: 170px;
+    width: clamp(90px, 12vw, 150px);
+    height: auto;
     border: 2px solid black;
     object-fit: cover;
   }
 
   .caption {
     font-family: 'Cinzel Decorative', serif;
-    font-size: 18px;
+    font-size: clamp(12px, 1.5vw, 18px);
     font-weight: bold;
     color: #002366;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
   /* Headings */
   .heading1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
+    font-size: clamp(24px, 4vw, 50px);
     font-weight: bold;
     text-shadow: 3px 3px 5px white;
     margin-top: 10px;
   }
 
   .heading2 {
-   font-family: 'Bookman Old Style', serif;
-      font-size: 65px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #FFD700;
-      -webkit-text-stroke: 2px black;
-      text-shadow: 5px 5px 5px blue;
-
-
-
+    font-family: 'Bookman Old Style', serif;
+    font-size: clamp(26px, 4.5vw, 65px);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFD700;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 5px 5px 5px blue;
   }
 
   .heading3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: clamp(18px, 3.5vw, 36px);
     color: green;
     text-shadow: 3px 3px 5px yellow;
   }
@@ -82,17 +77,17 @@
   /* Button Grid */
   .button-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
     justify-items: center;
     margin: 70px auto;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   button {
-    width: 250px;
-    height: 80px;
-    font-size: 22px;
+    width: clamp(180px, 22vw, 250px);
+    height: clamp(60px, 8vh, 80px);
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: bold;
     color: white;
     border: none;
@@ -120,11 +115,22 @@
   .btn8 { background: linear-gradient(to right, #ff9966, #ff5e62); }
   .btn9 { background: linear-gradient(to right, #667eea, #764ba2); }
 
+  /* Responsive Button Grid */
+  @media (max-width: 1024px) {
+    .button-container { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .button-container { grid-template-columns: repeat(2, 1fr); gap: 35px; }
+  }
+  @media (max-width: 480px) {
+    .button-container { grid-template-columns: 1fr; gap: 25px; margin: 40px auto; }
+  }
+
   /* Scrolling Text */
   .scroll-text {
-    margin-top: 50px;
+    margin-top: clamp(30px, 10vh, 50px);
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
     font-weight: bold;
     color: #FFD700;
     text-shadow: 3px 3px 6px #002366;
@@ -140,21 +146,10 @@
     bottom: 10px;
     right: 20px;
     opacity: 0.1;
-    font-size: 120px;
+    font-size: clamp(40px, 10vw, 120px);
     font-weight: bold;
     color: #0d47a1;
     user-select: none;
-    pointer-events: none;
-  }
-
-  /* Photo Watermark */
-  .photo-watermark {
-    position: fixed;
-    bottom: 20px;
-    LEFT: 20px;
-    opacity: 0.25;
-    width: 120px;
-    border-radius: 10px;
     pointer-events: none;
   }
 
@@ -165,7 +160,7 @@
     background: rgba(0, 35, 102, 0.6);
     color: white;
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -181,7 +176,6 @@
     color: #fff;
     text-decoration: underline;
   }
-
 </style>
 </head>
 
@@ -199,15 +193,10 @@
   <div class="heading3">GUNTUR DIVISION</div>
 
   <div class="button-container">
-    <button class="btn1" onclick="openFolder('https://drive.google.com/drive/folders/...')">📅 Daily Planning Sheets</button>
-    <button class="btn2" onclick="openFolder('https://drive.google.com/drive/folders/...')">📈 Monthly Analysis</button>
-    <button class="btn3" onclick="openFolder('https://docs.google.com/spreadsheets/...')">🚂 </button>
-    <button class="btn4" onclick="openFolder('https://drive.google.com/drive/folders/...')">📊 </button>
-    <button class="btn5" onclick="openFolder('https://drive.google.com/drive/folders/...')">🗂️ </button>
-    <button class="btn6" onclick="openFolder('https://drive.google.com/drive/folders/...')">📋 </button>
-    <button class="btn7" onclick="openFolder('https://drive.google.com/drive/folders/...')">📑 </button>
-    <button class="btn8" onclick="openFolder('https://drive.google.com/drive/folders/...')">🏗️ </button>
-    <button class="btn9" onclick="openFolder('https://drive.google.com/drive/folders/...')">🚉 </button>
+    <button class="btn1" onclick="openFolder('.............')">PROPOSED WORKS (PPW)</button>
+    <button class="btn2" onclick="openFolder('...............')">STATUS OF PPW</button>
+    <button class="btn3" onclick="openFolder('..............')">SANCTIONED WORKS (SCW)</button>
+    <button class="btn4" onclick="openFolder('https://drive.google.com/drive/folders/...')">STATUS OF SCW</button>
   </div>
 
   <div class="scroll-text">
@@ -217,7 +206,6 @@
   </div>
 
   <div class="watermark">PLAN</div>
-  
 
   <footer>
     <p>Designed for <strong>Planning & Analysis</strong> | Powered by 
@@ -232,4 +220,3 @@
   </script>
 </body>
 </html>
-
