@@ -18,7 +18,49 @@
     color: #002366;
   }
 
-  /* Logo and Passport */
+  /* LOGIN SCREEN */
+  #loginBox {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    max-width: 350px;
+    padding: 30px;
+    margin: 150px auto;
+  }
+
+  #loginBox h2 {
+    margin-bottom: 20px;
+    color: #002366;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  button.login-btn {
+    background-color: #002366;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button.login-btn:hover {
+    background-color: #0044cc;
+  }
+
+  /* Hide main content initially */
+  #mainContent { display: none; }
+
+  /* Existing content styling */
   .logo {
     position: absolute;
     top: 2%;
@@ -50,7 +92,6 @@
     margin-top: 6px;
   }
 
-  /* Headings */
   .heading1 {
     font-size: clamp(24px, 4vw, 50px);
     font-weight: bold;
@@ -74,7 +115,6 @@
     text-shadow: 3px 3px 5px yellow;
   }
 
-  /* Button Grid */
   .button-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -104,7 +144,6 @@
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
   }
 
-  /* Button Colors */
   .btn1 { background: linear-gradient(to right, #1565c0, #1e88e5); }
   .btn2 { background: linear-gradient(to right, #00897b, #26a69a); }
   .btn3 { background: linear-gradient(to right, #6a1b9a, #8e24aa); }
@@ -113,20 +152,7 @@
   .btn6 { background: linear-gradient(to right, #84fab0, #8fd3f4); }
   .btn7 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
   .btn8 { background: linear-gradient(to right, #ff9966, #ff5e62); }
-  .btn9 { background: linear-gradient(to right, #667eea, #764ba2); }
 
-  /* Responsive Button Grid */
-  @media (max-width: 1024px) {
-    .button-container { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 768px) {
-    .button-container { grid-template-columns: repeat(2, 1fr); gap: 35px; }
-  }
-  @media (max-width: 480px) {
-    .button-container { grid-template-columns: 1fr; gap: 25px; margin: 40px auto; }
-  }
-
-  /* Scrolling Text */
   .scroll-text {
     margin-top: clamp(30px, 10vh, 50px);
     font-family: 'Cinzel Decorative', cursive;
@@ -140,7 +166,6 @@
     background: rgba(0, 35, 102, 0.2);
   }
 
-  /* Watermark */
   .watermark {
     position: fixed;
     bottom: 10px;
@@ -153,7 +178,6 @@
     pointer-events: none;
   }
 
-  /* Footer */
   footer {
     text-align: center;
     padding: 15px;
@@ -180,53 +204,74 @@
 </head>
 
 <body>
-  <img src="L2.jpeg" alt="Logo" class="logo">
 
-  <div class="passport-container">
-    <img src="R1.jpeg" alt="Passport Photo" class="passport">
-    <div class="caption">J.SRINATH, IRTS</div>
-    <div class="caption">Sr.DOM/GNT</div>
+  <!-- LOGIN BOX -->
+  <div id="loginBox">
+    <h2>🔐 Secure Access</h2>
+    <input type="text" id="username" placeholder="Enter Username"><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+    <button class="login-btn" onclick="checkLogin()">Login</button>
   </div>
 
-  <div class="heading1">OPERATING DEPARTMENT</div>
-  <div class="heading2">Planning Cell</div>
-  <div class="heading3">GUNTUR DIVISION</div>
+  <!-- MAIN CONTENT -->
+  <div id="mainContent">
+    <img src="L2.jpeg" alt="Logo" class="logo">
+    <div class="passport-container">
+      <img src="R1.jpeg" alt="Passport Photo" class="passport">
+      <div class="caption">J.SRINATH, IRTS</div>
+      <div class="caption">Sr.DOM/GNT</div>
+    </div>
 
-  <!-- ✅ Button Grid (responsive) -->
-  <div class="button-container">
-    <button class="A" onclick="window.open('---------------')">---</button>
-   
+    <div class="heading1">OPERATING DEPARTMENT</div>
+    <div class="heading2">Planning Cell</div>
+    <div class="heading3">GUNTUR DIVISION</div>
+
+    <div class="button-container">
+      <button class="btn1" onclick="window.open('page1.html')">Page 1</button>
+      <button class="btn2" onclick="window.open('page2.html')">Page 2</button>
+      <button class="btn3" onclick="window.open('page3.html')">Page 3</button>
+      <button class="btn4" onclick="window.open('page4.html')">Page 4</button>
+    </div>
+
+    <div class="scroll-text">
+      <marquee behavior="scroll" direction="LEFT" scrollamount="05">
+        📢 WORK IS IN PROGRESS.... WILL BE UPDATED SOON..... 🚂 |
+      </marquee>
+      <marquee behavior="scroll" direction="LEFT" scrollamount="12">
+        📢 Welcome to the <span>Planning Section</span> of the <span>Operating Department</span>, Guntur Division 🚂 | South Central Railway
+      </marquee>
+    </div>
+
+    <div class="watermark">PLAN</div>
+
+    <footer>
+      <p>Designed for <strong>Planning & Analysis</strong> | Powered by 
+        <a href="https://gunturoperating-hub.github.io/TI-HOME/">Operating Department, GNT Division</a>
+      </p>
+    </footer>
   </div>
 
-
-  <div class="scroll-text">
-
-    <marquee behavior="scroll" direction="LEFT" scrollamount="05">
-      📢 WORK IS IN PROGRESS.... WILL BE UPDATE SOON..... 🚂 |
-    </marquee>
-    <marquee behavior="scroll" direction="LEFT" scrollamount="12">
-      📢 Welcome to the <span>Planning Section</span> of the <span>Operating Department</span>, Guntur Division 🚂 | South Central Railway
-    </marquee>
-  </div>
-
-  <div class="watermark">PLAN</div>
-
-  <footer>
-    <p>Designed for <strong>Planning & Analysis</strong> | Powered by 
-      <a href="https://gunturoperating-hub.github.io/TI-HOME/">Operating Department, GNT Division</a>
-    </p>
-  </footer>
-
+  <!-- LOGIN SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script>
-    function openFolder(url) {
-      window.open(url, "_blank");
+    // 👇 You can change these credentials
+    const validUsers = {
+      "planner1": "21232f297a57a5a743894a0e4a801fc3", // password: admin
+      "planner2": "5f4dcc3b5aa765d61d8327deb882cf99"  // password: password
+    };
+
+    function checkLogin() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value;
+      const hash = CryptoJS.MD5(pass).toString();
+
+      if (validUsers[user] && validUsers[user] === hash) {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+      } else {
+        alert("❌ Invalid Username or Password");
+      }
     }
   </script>
 </body>
 </html>
-
-
-
-
-
-
